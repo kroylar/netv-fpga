@@ -31,19 +31,19 @@
 `timescale 1 ns / 1 ps
 
 module data_island (
-		    input wire pclk;
-		    input wire reset;
+		    input wire pclk,
+		    input wire reset,
 		    
-		    input wire [3:0] data_ch2;
-		    input wire [3:0] data_ch1;
-		    input wire data_header_ch0;
-		    input wire data_gb;
-		    input wire video_gb;
+		    input wire [3:0] data_ch2,
+		    input wire [3:0] data_ch1,
+		    input wire data_header_ch0,
+		    input wire data_gb,
+		    input wire video_gb,
 		    
-		    output wire [7:0] packet_type;
-		    output wire [15:0] header_data;
-		    output wire [7:0] packet_data; // this is an 8 entry, 8-bit wide RAM
-		    input wire [2:0] packet_index;
+		    output wire [7:0] packet_type,
+		    output wire [15:0] header_data,
+		    output wire [7:0] packet_data, // this is an 8 entry, 8-bit wide RAM
+		    input wire [2:0] packet_index,
 		    );
 
    parameter RAM_WIDTH = <ram_width>;
